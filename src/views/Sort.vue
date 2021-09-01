@@ -2,24 +2,18 @@
   <div>
     <Hero title="FILTER GIVEAWAYS" />
     <FilterMenu />
-    <div class="columns is-multiline is-narrow-mobile mt-6">
-      <Card
-        v-for="(item, index) in sortedGiveaways"
-        :key="index"
-        :giveaway="item"
-      />
-    </div>
+    <CardList :data="sortedGiveaways" />
   </div>
 </template>
 
 <script>
 import Hero from "@/components/Hero.vue";
 import FilterMenu from "@/components/FilterMenu.vue";
-import Card from "@/components/Card.vue";
+import CardList from "@/components/CardList.vue";
 
 export default {
   name: "Sort",
-  components: { Hero, FilterMenu, Card },
+  components: { Hero, FilterMenu, CardList },
   computed: {
     sortedGiveaways() {
       return this.$store.state.sortedGiveAways;

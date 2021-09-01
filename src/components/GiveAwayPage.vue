@@ -86,7 +86,6 @@ export default {
   },
   beforeUpdate() {
     const worth = this.$store.state.giveaway.worth;
-    console.log(worth);
     if (worth !== "N/A") {
       this.price = Number(worth.substring(1));
     }

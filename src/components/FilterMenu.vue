@@ -3,11 +3,24 @@
     <div class="tile is-ancestor has-text-centered">
       <div class="tile is-parent">
         <article class="tile is-child box">
-          <p class="subtitle">Select Types</p>
+          <p class="subtitle">Select Platforms</p>
           <div class="select">
             <select v-model="selectedPlatform">
               <option>pc</option>
               <option>steam</option>
+              <option>epic-games-store</option>
+              <option>ubisoft</option>
+              <option>gog</option>
+              <option>itchio</option>
+              <option>ps4</option>
+              <option>xbox-one</option>
+              <option>switch</option>
+              <option>android</option>
+              <option>ios</option>
+              <option>vr</option>
+              <option>battlenet</option>
+              <option>origin</option>
+              <option>drm-free</option>
             </select>
           </div>
         </article>
@@ -17,7 +30,6 @@
           <p class="subtitle">Select Types</p>
           <div class="select">
             <select v-model="selectedType">
-              <option>Select dropdown</option>
               <option>game</option>
               <option>loot</option>
               <option>beta</option>
@@ -27,12 +39,12 @@
       </div>
       <div class="tile is-parent">
         <article class="tile is-child box">
-          <p class="subtitle">Select Types</p>
+          <p class="subtitle">SortBy</p>
           <div class="select">
             <select v-model="selectedSortBy">
-              <option>Select dropdown</option>
               <option>date</option>
               <option>value</option>
+              <option>popularity</option>
             </select>
           </div>
         </article>

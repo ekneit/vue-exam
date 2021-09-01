@@ -15,7 +15,7 @@
         ></div>
         <div
           v-if="giveaway.status !== 'Active'"
-          class="status  has-background-danger-dark"
+          class="status has-background-danger-dark"
         ></div>
       </div>
       <div class="card-content">
@@ -29,6 +29,10 @@
         </div>
 
         <div class="content">
+          <p class="is-6 tm-2" v-if="giveaway.worth !== 'N/A'">
+            <span class="has-text-weight-bold">Price: </span>
+            {{ giveaway.worth }}
+          </p>
           <time>{{ giveaway.published_date }}</time>
         </div>
       </div>
@@ -49,6 +53,9 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  height: 100%;
+}
 .card-image {
   position: relative;
 }
